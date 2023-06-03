@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import PoNew from "@/components/PO/PoNew.vue";
+import PoOrder from "@/components/PO/PoOrder.vue";
+import PoReady from "@/components/PO/PoReady.vue";
 
 const routes = [
   {
@@ -16,6 +19,22 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
+  {
+    path:'/PoNew',
+    name:'PoNew',
+    component:PoNew,
+  },
+  {
+    path:'/PoReady',
+    name:'PoReady',
+    component:PoReady,
+  },
+  {
+    path:'/PoOrder',
+    name:'PoOrder',
+    component:PoOrder,
+  },
+  
 ];
 
 const router = createRouter({
